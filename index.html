@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Incredible India — Tourism</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    :root{--hero-height:70vh}
+    body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; }
+    .hero {
+      height: var(--hero-height);
+      display: grid;
+      place-items: center;
+      color: white;
+      text-align: center;
+      background-size:cover;
+      background: linear-gradient(rgba(0,0,0,.35), rgba(0,0,0,.35)),
+                  url('https://upload.wikimedia.org/wikipedia/commons/d/da/Taj-Mahal.jpg') center/cover no-repeat;
+    }
+    .hero h1 { font-size: clamp(2rem, 4vw, 3.5rem); font-weight: 700; text-shadow: 0 6px 18px rgba(0,0,0,.5); }
+    section { padding: 80px 0; }
+    .card-img-top { height: 220px; object-fit: cover; }
+    .highlight { animation: glow 2s ease-in-out 2; background-color: #ffe8a1 !important; }
+    @keyframes glow {
+      0% { background-color: #fff3cd; }
+      50% { background-color: #ffe8a1; }
+      100% { background-color: #fff3cd; }
+    }
+    footer { background:#0b1220; color:#fff; padding:18px 0; }
+    /* small screens spacing */
+    @media (max-width:576px) {
+      .card-img-top { height: 180px; }
+      .hero { padding: 3rem 1rem; background-position: center 30%; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#home">Incredible India</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="nav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#places">Places</a></li>
+          <li class="nav-item"><a class="nav-link" href="#details">Details</a></li>
+          <li class="nav-item"><a class="nav-link" href="#bookings">Bookings</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero / Home -->
+  <section id="home" class="hero">
+    <div class="container">
+      <h1 class="display-4 fw-bold">Discover Incredible India</h1>
+      <p class="lead mb-3">Heritage, spirituality, mountains, beaches — choose your next adventure.</p>
+      <a class="btn btn-primary btn-lg" href="#places">Explore Places</a>
+    </div>
+  </section>
+
+  <!-- Places -->
+  <section id="places" class="bg-light">
+    <div class="container">
+      <h2 class="fw-bold text-center mb-4">Popular Places</h2>
+
+      <div class="row g-4">
+        <!-- Taj Mahal (permanent Wikimedia image) -->
+        <div class="col-md-6">
+          <div class="card shadow-sm h-100">
+            <img class="card-img-top"
+                 src="https://upload.wikimedia.org/wikipedia/commons/d/da/Taj-Mahal.jpg"
+                 alt="Taj Mahal"
+                 onerror="this.onerror=null;this.src='https://via.placeholder.com/800x600?text=Image+Unavailable';">
+            <div class="card-body">
+              <h5 class="card-title">Taj Mahal</h5>
+              <p class="card-text">Iconic white-marble mausoleum in Agra — a UNESCO World Heritage site.</p>
+              <a class="btn btn-outline-primary view-details" href="#details" data-destination="Taj Mahal">View Details</a>
+            </div>
+          </div>
+        </div>
+        <!-- Varanasi (permanent Wikimedia image) -->
+        <div class="col-md-6">
+          <div class="card shadow-sm h-100">
+            <img class="card-img-top"
+                 src="https://upload.wikimedia.org/wikipedia/commons/3/32/Boats_at_the_Ganges_at_sunrise.JPG"
+                 alt="Varanasi ghats"
+                 onerror="this.onerror=null;this.src='https://via.placeholder.com/800x600?text=Image+Unavailable';">
+            <div class="card-body">
+              <h5 class="card-title">Varanasi</h5>
+              <p class="card-text">One of the world’s oldest living cities — famous for the Ganga ghats and rituals.</p>
+              <a class="btn btn-outline-primary view-details" href="#details" data-destination="Varanasi">View Details</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ooty (permanent Wikimedia image) -->
+        <div class="col-md-6">
+          <div class="card shadow-sm h-100">
+            <img class="card-img-top"
+                 src="https://upload.wikimedia.org/wikipedia/commons/7/72/Tea_gardens_in_Ooty.jpg"
+                 alt="Ooty tea gardens"
+                 onerror="this.onerror=null;this.src='https://via.placeholder.com/1000x700?text=Image+Unavailable';">
+            <div class="card-body">
+              <h5 class="card-title">Ooty</h5>
+              <p class="card-text">Queen of hill stations — tea gardens, cool climate and scenic views.</p>
+              <a class="btn btn-outline-primary view-details" href="#details" data-destination="Ooty">View Details</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Coonoor (permanent Wikimedia image) -->
+        <div class="col-md-6">
+          <div class="card shadow-sm h-100">
+            <img class="card-img-top"
+                 src="https://upload.wikimedia.org/wikipedia/commons/0/0f/Tea_Estates_Of_Coonoor_%28258465207%29.jpeg"
+                 alt="Coonoor tea estates"
+                 onerror="this.onerror=null;this.src='https://via.placeholder.com/1000x700?text=Image+Unavailable';">
+            <div class="card-body">
+              <h5 class="card-title">Coonoor</h5>
+              <p class="card-text">Peaceful Nilgiri town known for tea estates, viewpoints like Dolphin's Nose.</p>
+              <a class="btn btn-outline-primary view-details" href="#details" data-destination="Coonoor">View Details</a>
+            </div>
+          </div>
+        </div>
+      </div><!-- /.row -->
+
+    </div><!-- /.container -->
+  </section>
+
+  <!-- Details & Pricing -->
+  <section id="details">
+    <div class="container text-center">
+      <h2 class="fw-bold mb-4">Travel Details & Pricing</h2>
+      <p class="lead">Choose from curated travel packages. Click a place for quick details & highlight in the table.</p>
+
+      <table class="table table-bordered table-striped mt-4">
+        <thead class="table-dark">
+          <tr>
+            <th>Destination</th>
+            <th>Package</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr id="row-Taj Mahal"><td>Taj Mahal</td><td>2 Nights / 3 Days</td><td>$250</td></tr>
+  
+          <tr id="row-Ooty"><td>Ooty</td><td>4 Nights / 5 Days</td><td>$450</td></tr>
+          <tr id="row-Varanasi"><td>Varanasi</td><td>2 Nights / 3 Days</td><td>$300</td></tr>
+          <tr id="row-Coonoor"><td>Coonoor</td><td>3 Nights / 4 Days</td><td>$400</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Bookings -->
+  <section id="bookings" class="bg-light">
+    <div class="container">
+      <h2 class="fw-bold text-center mb-4">Book Your Trip</h2>
+
+      <form id="bookingForm" class="row g-3 justify-content-center">
+        <div class="col-md-4">
+          <input type="text" class="form-control" placeholder="Full Name" required>
+        </div>
+        <div class="col-md-4">
+          <input type="email" class="form-control" placeholder="Email" required>
+        </div>
+        <div class="col-md-4">
+          <select class="form-select" id="selDest" required>
+            <option selected disabled>Choose Destination</option>
+            <option>Taj Mahal</option>
+  
+            <option>Ooty</option>
+            <option>Varanasi</option>
+            <option>Coonoor</option>
+          </select>
+        </div>
+        <div class="col-md-4">
+          <input type="date" class="form-control" required>
+        </div>
+        <div class="col-12 text-center">
+          <button class="btn btn-success btn-lg" type="submit">Confirm Booking</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class="container text-center">
+      <h2 class="fw-bold mb-3">Contact Us</h2>
+      <p class="mb-1">We’d love to help you to plan your trip.</p>
+      <p><strong>Email:</strong> Incredible@tourism.com | <strong>Phone:</strong> +91 87756 43210</p>
+      <a class="btn btn-dark" href="#home">Back to Top</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center">
+    <div class="container">
+      <small>© Incredible India Tours.</small>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Booking confirm
+    document.getElementById('bookingForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      alert('🎉 Thank you — your booking is confirmed. We will contact you shortly!');
+      this.reset();
+    });
+
+    // View details + highlight row
+    document.querySelectorAll('.view-details').forEach(btn => {
+      btn.addEventListener('click', function (e) {
+        const destination = this.dataset.destination;
+        const row = document.getElementById('row-' + destination);
+        if (!row) return;
+        // remove existing highlights
+        document.querySelectorAll('tbody tr').forEach(r => r.classList.remove('highlight'));
+        // scroll and highlight
+        setTimeout(() => {
+          row.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          row.classList.add('highlight');
+          setTimeout(() => row.classList.remove('highlight'), 4000);
+        }, 200);
+      });
+    });
+  </script>
+</body>
+</html>
